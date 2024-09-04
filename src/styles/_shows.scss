@@ -7,6 +7,7 @@
     display: none;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 24px;
+    min-height: 50vw;
     &__item{
       img{
         max-width: 100%;
