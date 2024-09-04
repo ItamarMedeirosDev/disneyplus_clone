@@ -8,6 +8,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 24px;
     min-height: 50vw;
+    list-style: none;
     &__item{
       img{
         max-width: 100%;
