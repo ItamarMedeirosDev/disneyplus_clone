@@ -10,6 +10,10 @@
     gap: 24px;
     list-style: none;
 
+    @media(max-width:768px){
+      grid-template-columns: 1fr 1fr;
+    }
+
     &__item{
       text-align: center;
       list-style: none;

@@ -7,6 +7,15 @@
     display: flex;
     justify-content: space-around;
     margin-top: 50px;
+
+    @media(max-width:768px){
+      display: block;
+      margin-top: 0;
+    }
+
+    .button{
+      margin-top: 24px;
+    }
     
     &__item{
       text-align: center;
@@ -14,6 +23,14 @@
       max-width: 380px;
       width: 100%;
       list-style: none;
+
+      @media(max-width:768px){
+        padding-top: 0px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+      }
 
       &:nth-child(2){
         background-image: url(../../dist/images/fundo_combo_plus.png);

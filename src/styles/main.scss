@@ -42,27 +42,57 @@ body{
 @mixin title($fontSize:40px){
   @include text($fontSize);
   color:variaveis.$corTextoSecundaria;
+
+  @media(max-width:768){
+    font-size: 24px;
+  }
 }
 
 
 .text--lg{
   @include text(18px);
+
+  @media (max-width:768px){
+    @include text(15px);
+  }
 }
 .text--md{
   @include text;
+  @media (max-width:768px){
+    @include text(14px);
+  }
 }
 .text--sm{
   @include text(12px);
+
+  @media (max-width:768px){
+    @include text(11px);
+  }
 }
 .title--lg{
   @include title(44px);
+
+  @media (max-width:768px){
+    @include title(26px);
+  }
+
 }
 .title--md{
   @include title;
+
+  @media (max-width:768px){
+    @include title(24px);
+  }
+  
 }
 .title--sm{
   @include title(28px);
+
+  @media (max-width:768px){
+    @include title(22px);
+  }
 }
+
 .link-text{
   @include text(18px);
   color:variaveis.$corTextoSecundaria;
@@ -115,6 +145,11 @@ body{
   grid-template-columns: 1fr 1fr;
   align-items: center;
 
+  @media(max-width:768px){
+    display: block;
+    text-align: center;
+  }
+
   img{
     max-width: 100%;
   }
@@ -123,6 +158,10 @@ body{
 
     h2{
       margin-bottom: 24px;
+
+      @media(max-width:768px){
+        margin-top: 20px;
+      }
     }
   }
 
@@ -141,6 +180,12 @@ body{
       width: calc(50% - 5.6vw);
       flex-direction: column;
       justify-content: center;
+
+      @media(max-width:768px){
+        position: relative;
+        left: 0;
+        width: 100%;
+      }
     }
   }
 }
