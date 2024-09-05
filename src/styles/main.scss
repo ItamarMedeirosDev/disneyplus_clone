@@ -1,10 +1,12 @@
 @use 'variaveis';
+@use 'header';
 @use 'hero';
 @use 'shows';
 @use 'plans';
 @use 'devices';
 @use 'faq';
 @use 'footer';
+
 
 @font-face {
   font-family: Avenir;
@@ -22,6 +24,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Avenir, sans-serif;
+  list-style: none;
 }
 
 
@@ -66,20 +69,43 @@ body{
   text-decoration: underline;
 }
 .button{
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 60px;
   font-size: 18px;
   color: variaveis.$corTextoSecundaria;
-  background-color: #6421ff;
+  background-color: variaveis.$corBotaoPrimario;
   border-radius: 4px;
-  margin-top: 2vw;
-  margin-bottom: 8px;
   border: none;
   cursor: pointer;
+  text-decoration: none;
+  padding: 8px 14px;
+  letter-spacing: 1px;
+  border: 1px solid variaveis.$corBotaoPrimario;
+  text-transform: uppercase;
+
+  &--secondary{
+    background-color: variaveis.$corBotaoSecundario;
+    border-color: variaveis.$corBotaoSecundario;
+
+    &:hover{
+      background-color:lighten(variaveis.$corBotaoSecundario,3%)!important;
+    }
+  }
+  &--dark{
+    background-color: rgba(variaveis.$corBotaoDark,0.8);
+    border-color: variaveis.$corTextoSecundaria;
+
+    &:hover{
+      background-color:variaveis.$corTextoSecundaria !important;
+      color: variaveis.$corBotaoDark;
+    }
+  }
 
   &:hover{
-    background-color: #511bd1;
+    background-color:lighten(variaveis.$corBotaoPrimario,3%);
   }
 }
 
