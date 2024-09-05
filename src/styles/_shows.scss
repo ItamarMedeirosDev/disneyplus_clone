@@ -7,8 +7,9 @@
     display: none;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 24px;
-    min-height: 50vw;
+    
     list-style: none;
+    padding: 0;
 
     @media (max-width: 768px){
       grid-template-columns: 1fr 1fr;
